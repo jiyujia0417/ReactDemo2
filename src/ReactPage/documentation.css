@@ -1,0 +1,26 @@
+a{
+    text-decoration: none;
+}
+
+/* .doc{
+    display: flex;
+} */
+
+.doc .content{
+    flex:1;
+    margin-top:10px;
+    padding-left: 50px;
+}
+
+ol li{
+    width:200px;
+}
+
+ol li a{
+    color:black;
+}
+
+ol li a:active{
+    color:#666;
+}
+
