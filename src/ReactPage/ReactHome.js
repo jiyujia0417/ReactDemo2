@@ -1,14 +1,7 @@
-import React, { Component } from 'react';
-import { HashRouter as Router, Route, Redirect, Link, Switch, NavLink, useLocation, useParams, useRouteMatch, useHistory } from 'react-router-dom';
-import Documentation from './Documentation';
-import Blog from './Blog';
-import Tutorials from './Tutorials';
+import React from 'react';
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import Header from './Header';
-import Community from './Community';
-import Home from './Home';
-import Login from './Login';
 import routes from '../router.config';
-import { render } from '@testing-library/react';
 /*
 路由基本配置
 路由传参（以及获取参数-props）

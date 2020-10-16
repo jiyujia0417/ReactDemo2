@@ -1,11 +1,26 @@
-import React from 'react'
+import { SearchBar } from 'antd-mobile';
+import SearchTab from './SearchTab'
+import React, { Component } from 'react'
 
-const Home = () =>{
-    return (
-        <div>
-            <i style={{fontSize:100,color:'red'}} className='iconfont icon-shouye'></i>
-        </div>
-    )
+export default class Home extends Component {
+    FocusChange=(props)=>{
+        console.log(props);
+    }
+    render() {
+        return (
+            <div>
+                 <SearchTab />
+            </div>
+        )
+    }
 }
 
-export default Home;
+
+
+// const Home = () =>{
+//     return (
+       
+//     )
+// }
+
+// export default Home;

@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1346666",
+      "name": "淘宝",
+      "font_class": "taobao",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
       "icon_id": "586756",
       "name": "首页",
       "font_class": "weibiaoti1",

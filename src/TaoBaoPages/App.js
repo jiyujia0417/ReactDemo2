@@ -6,14 +6,16 @@ import Home from './Home';
 import Cart from './Cart';
 import Orderlist from './Orderlist';
 import Me from './Me';
+import JumpSearch from './JumpSearch';
 
 const App = ()=>{
 	return <Router>
 		<Switch>
 			<Route exact path='/home' component={Home} />
             <Route path='/cart' component={Cart} />
-            <Route path='/orderlist'component={Orderlist}/>
-            <Route path='/me'component={Me}/>
+            <Route path='/orderlist' component={Orderlist}/>
+            <Route path='/me' component={Me}/>
+			<Route path='/JumpChange' component={JumpSearch}/>
 		</Switch>
         <MyTab/>
 	</Router>
