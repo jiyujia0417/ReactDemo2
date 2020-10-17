@@ -11,13 +11,16 @@ import JumpSearch from './JumpSearch';
 const App = ()=>{
 	return <Router>
 		<Switch>
-			<Route exact path='/home' component={Home} />
+			{/* <Redirect from='/' to='/home'/> */}
+			{/* <Redirect from ='/' to='/home'/> */}
+			<Route exact path='/' component={Home} />
+			<Route path = '/home' component={Home}/>
             <Route path='/cart' component={Cart} />
             <Route path='/orderlist' component={Orderlist}/>
             <Route path='/me' component={Me}/>
 			<Route path='/JumpChange' component={JumpSearch}/>
 		</Switch>
-        <MyTab/>
+		
 	</Router>
 }
 export default App;

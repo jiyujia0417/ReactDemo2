@@ -1,0 +1,18 @@
+.am-search {
+    border-bottom: 1px solid #ddd;
+  }
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+  
+  .am-search-cancel{
+      color:white;
+  }
+  /* .am-tab-bar-bar{
+      display: none;
+  } */
+  /* .am-search-input{
+      background-color: whitesmoke;
+  } */

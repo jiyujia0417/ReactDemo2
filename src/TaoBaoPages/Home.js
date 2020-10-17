@@ -1,6 +1,8 @@
 import { SearchBar } from 'antd-mobile';
 import SearchTab from './SearchTab'
 import React, { Component } from 'react'
+import MyTab from './MyTab';
+import Carousels from './Carousels';
 
 export default class Home extends Component {
     FocusChange=(props)=>{
@@ -10,6 +12,8 @@ export default class Home extends Component {
         return (
             <div>
                  <SearchTab />
+                 <Carousels/>
+                 <MyTab/>
             </div>
         )
     }

@@ -5,43 +5,26 @@ import 'antd-mobile/dist/antd-mobile.css'
 import { withRouter } from "react-router-dom"
 
 class SearchTab extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-    FoucusChange=()=>{
-        this.props.history.push('/JumpChange')
-    }
+
     render() {
         console.log('search:', this.props);
-        console.log('location',this.props.location);
-        const { pathname } = this.props.location;
+        console.log('location', this.props.location);
 
-        return (<div>
-            <header className="header">
-                <i className='iconfont icon-taobao' id="search-tab" />
-                <WingBlank>
-                    <SearchBar onFocus={this.FoucusChange} className="search-bar" placeholder="寻找宝贝店铺" ref={ref => this.autoFocusInst = ref} />
-                </WingBlank>
-                <WhiteSpace />
-            </header>
+        return (
+            <div>
 
+                {/* <i className='iconfont icon-taobao' id="search-tab" /> */}
 
+                <SearchBar
+                // style={{backgroundImage: "url(" + require("https://tse3-mm.cn.bing.net/th/id/OIP.79ivlHto5dnXkfZX1Z3aLAHaGl?w=209&h=185&c=7&o=5&dpr=2&pid=1.7") + ")"}}
+                    onCancel={() => { console.log('111') }}
+                    onFocus={() => {
+                        this.props.history.push('/JumpChange')
+                    }}
+                    onCancel={() => console.log('onCancel')}
+                    className="search-bar" placeholder="寻找宝贝店铺" ref={ref => this.autoFocusInst = ref} />
 
-            {/* <WhiteSpace />
-            <WingBlank><div className="sub-title">Show cancel button</div></WingBlank>
-            <SearchBar
-                value={this.state.value}
-                placeholder="Search"
-                onSubmit={value => console.log(value, 'onSubmit')}
-                onClear={value => console.log(value, 'onClear')}
-                onFocus={() => console.log('onFocus')}
-                onBlur={() => console.log('onBlur')}
-                onCancel={() => console.log('onCancel')}
-                showCancelButton
-                onChange={this.onChange}
-            /> */}
-        </div>);
+            </div>);
     }
 }
 
