@@ -12,9 +12,7 @@ class SearchTab extends React.Component {
 
         return (
             <div>
-
                 {/* <i className='iconfont icon-taobao' id="search-tab" /> */}
-
                 <SearchBar
                 // style={{backgroundImage: "url(" + require("https://tse3-mm.cn.bing.net/th/id/OIP.79ivlHto5dnXkfZX1Z3aLAHaGl?w=209&h=185&c=7&o=5&dpr=2&pid=1.7") + ")"}}
                     onCancel={() => { console.log('111') }}

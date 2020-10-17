@@ -7,7 +7,7 @@ import Cart from './Cart';
 import Orderlist from './Orderlist';
 import Me from './Me';
 import JumpSearch from './JumpSearch';
-
+import Detail from './Detail'
 const App = ()=>{
 	return <Router>
 		<Switch>
@@ -19,6 +19,7 @@ const App = ()=>{
             <Route path='/orderlist' component={Orderlist}/>
             <Route path='/me' component={Me}/>
 			<Route path='/JumpChange' component={JumpSearch}/>
+			<Route path='/detail' component={Detail}/>
 		</Switch>
 		
 	</Router>

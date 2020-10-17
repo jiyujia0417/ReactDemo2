@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2028395",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "3956141",
+      "name": "在线客服",
+      "font_class": "kujialeqiyezhan_zaixiankefu-",
+      "unicode": "e653",
+      "unicode_decimal": 58963
+    },
+    {
+      "icon_id": "8575002",
+      "name": "我的店铺客服",
+      "font_class": "kefu",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "9606437",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
       "icon_id": "1346666",
       "name": "淘宝",
       "font_class": "taobao",
