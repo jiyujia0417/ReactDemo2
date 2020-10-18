@@ -53,9 +53,9 @@ class MyTab extends React.Component {
 						}}
 						data-seed="logId1"
 					>
-						<Button onClick={() => {
+						{/* <Button onClick={() => {
 							this.props.history.push('/documentation')
-						}} type='primary'>ToDOC</Button>
+						}} type='primary'>ToDOC</Button> */}
 					</TabBar.Item>
 
 					<TabBar.Item

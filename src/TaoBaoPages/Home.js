@@ -14,7 +14,7 @@ export default class Home extends Component {
             <div>
                  <SearchTab />
                  <Carousels/>
-                 <Grids/>
+                 {/* <Grids/> */}
                  <Products/>
                  <MyTab/>
             </div>
