@@ -1,24 +1,20 @@
-#search-tab{
+.searchTab #search-tab{
     display: inline;
 }
-.am-search {
+.searchTab .am-search {
     border-bottom: 1px solid #ddd;
 }
 
-.am-search{
+.searchTab .am-search{
     background-color: #FF852A;
 }
-.am-search-input{
-    
-    /* background-image:  url(../../public/iconfont/user.png); */
+.searchTab .am-search-input{
     background-position: left top;
     background-repeat: no-repeat;
-    /* background: url(../../public/iconfont/user.png) left top no-repeat; */
     background-color: #FF4E22;
     text-align: center;
     margin: 10px;
-    /* padding: 20px; */
 }
-.am-search-input .am-search-synthetic-ph-placeholder{
+.searchTab .am-search-input .am-search-synthetic-ph-placeholder{
     color: #FFFFF9;
 }

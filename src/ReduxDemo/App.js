@@ -6,7 +6,7 @@ Router (react-router) 怎么实现的（源码）
 */
 import store from './store'
 import React,{useState,useEffect} from 'react';
-// import {Provider} from 'react-router'
+import {Provider} from 'react-router'
 
 const App = () => {
     // let todos = store.getState();

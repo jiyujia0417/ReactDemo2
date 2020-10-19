@@ -1,9 +1,9 @@
 import './SearchTab.css'
-import React, { Component } from 'react'
+import React from 'react'
 import 'antd-mobile/dist/antd-mobile.css'
 import { withRouter } from "react-router-dom"
 import './jumpSearch.css'
-import { SearchBar, Button, WhiteSpace, WingBlank, TabBar } from 'antd-mobile';
+import { SearchBar } from 'antd-mobile';
 
 class JumpSearch extends React.Component {
     state = {
@@ -23,7 +23,6 @@ class JumpSearch extends React.Component {
         return (<div>
 
             <SearchBar
-                // value={this.state.value}
                 placeholder="宝贝"
                 onSubmit={value => console.log(value, 'onSubmit')}
                 onClear={value => console.log(value, 'onClear')}

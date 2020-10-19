@@ -1,19 +1,8 @@
 import React from 'react';
 import { Carousel, WingBlank } from 'antd-mobile';
 import './Carousels.css'
+
 class Carousels extends React.Component {
-    state = {
-        data: ['1', '2', '3'],
-        imgHeight: 176,
-    }
-    componentDidMount() {
-        // simulate img loading
-        setTimeout(() => {
-            this.setState({
-                data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-            });
-        }, 100);
-    }
     render() {
         return (
             <WingBlank>

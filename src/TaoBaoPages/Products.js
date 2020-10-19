@@ -15,7 +15,7 @@ class Products extends Component {
         console.log(this.props);
         return (
             <div style={{ width: '100%' }}>
-                <div className="sub-title" style={{ color: '#FF4E22', textAlign: 'center' }}>❤ 品质好物 ❤</div>
+                <div className="sub-title" style={{ color: '#FF4E22', textAlign: 'center', height: '50px', lineHeight: '50px' }}>❤ 品质好物 ❤</div>
                 <Grid data={data}
                     itemStyle={{ height: '200px', width: '171px', margin: '9px 4.5px 0 4.5px' }}
                     onClick={() => {
@@ -32,11 +32,11 @@ class Products extends Component {
                                 <span> {dataItem.num}人已购买</span>
                             </div>
                         </div>
-                        
+
                     )}
                 />
-                <div  className="sub-title" style={{ color: '#FF4E22', textAlign: 'center' }}>更多好物，敬请期待......</div>
-                <div style={{height:'50px'}}></div>
+                <div className="sub-title" style={{ color: '#FF4E22', textAlign: 'center', height: '50px', lineHeight: '50px' }}>更多好物，敬请期待......</div>
+                <div style={{ height: '50px' }}></div>
             </div>
         )
     }
