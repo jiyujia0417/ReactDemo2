@@ -18,8 +18,8 @@ const App = () => {
 			<Route path='/more' component={More} />
 			<Route path='/JumpChange' component={JumpSearch} />
 			<Route path='/detail' component={Detail} />
-			<Route render={() => <Redirect to='/' />} />
-			{/* <Route component={Home}/> */}
+			{/* <Route render={() => <Redirect to='/' />} /> */}
+			<Route component={Home} />
 			{/* <Redirect from='/' to='/home'/> */}
 		</Switch>
 	</Router>
