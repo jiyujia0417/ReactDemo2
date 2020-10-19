@@ -28,14 +28,15 @@ class Products extends Component {
                             <div style={{ color: '#888', fontSize: '7px', margin: '3px' }}>
                                 <span>{dataItem.text}</span>
                                 <br />
-                                {/* <div style={{ height: '10px' }}></div> */}
                                 <span style={{ color: '#FF852A' }}>￥ {dataItem.money} </span>
                                 <span> {dataItem.num}人已购买</span>
                             </div>
                         </div>
+                        
                     )}
                 />
-                {/* <div style={{ color: '#FF4E22' }}>更多好物，敬请期待</div> */}
+                <div  className="sub-title" style={{ color: '#FF4E22', textAlign: 'center' }}>更多好物，敬请期待......</div>
+                <div style={{height:'50px'}}></div>
             </div>
         )
     }

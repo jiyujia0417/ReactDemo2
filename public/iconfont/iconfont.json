@@ -6,6 +6,41 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2418255",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    },
+    {
+      "icon_id": "3858855",
+      "name": "客服",
+      "font_class": "kefu1",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "5756005",
+      "name": "客服",
+      "font_class": "kefu2",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "7287572",
+      "name": "店铺",
+      "font_class": "dianpu1",
+      "unicode": "e739",
+      "unicode_decimal": 59193
+    },
+    {
+      "icon_id": "14886548",
+      "name": "客服",
+      "font_class": "kefu3",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
       "icon_id": "2028395",
       "name": "星星",
       "font_class": "xingxing",

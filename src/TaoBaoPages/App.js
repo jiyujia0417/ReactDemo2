@@ -11,8 +11,6 @@ import Detail from './Detail'
 const App = ()=>{
 	return <Router>
 		<Switch>
-			{/* <Redirect from='/' to='/home'/> */}
-			{/* <Redirect from ='/' to='/home'/> */}
 			<Route exact path='/' component={Home} />
 			<Route path = '/home' component={Home}/>
             <Route path='/cart' component={Cart} />
@@ -20,6 +18,9 @@ const App = ()=>{
             <Route path='/me' component={Me}/>
 			<Route path='/JumpChange' component={JumpSearch}/>
 			<Route path='/detail' component={Detail}/>
+			<Route render={()=><Redirect to='/'/>}/> 
+			{/* <Route component={Home}/> */}
+			{/* <Redirect from='/' to='/home'/> */}
 		</Switch>
 		
 	</Router>
