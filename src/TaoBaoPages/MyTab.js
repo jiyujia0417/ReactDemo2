@@ -1,3 +1,5 @@
+//MyTab.js
+
 import React from 'react';
 import 'antd-mobile/dist/antd-mobile.css'
 import { TabBar } from "antd-mobile"

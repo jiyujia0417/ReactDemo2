@@ -1,5 +1,7 @@
+//App.js
+
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import Cart from './Cart';
 import Orderlist from './Orderlist';
@@ -18,9 +20,7 @@ const App = () => {
 			<Route path='/more' component={More} />
 			<Route path='/JumpChange' component={JumpSearch} />
 			<Route path='/detail' component={Detail} />
-			{/* <Route render={() => <Redirect to='/' />} /> */}
 			<Route component={Home} />
-			{/* <Redirect from='/' to='/home'/> */}
 		</Switch>
 	</Router>
 }

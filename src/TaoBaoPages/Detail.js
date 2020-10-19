@@ -1,3 +1,5 @@
+// Detail.js
+
 import { NavBar, Icon } from 'antd-mobile';
 import React from 'react'
 import { withRouter } from 'react-router-dom';

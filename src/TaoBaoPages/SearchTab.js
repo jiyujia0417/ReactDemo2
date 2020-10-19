@@ -1,3 +1,5 @@
+//SearchTab.js
+
 import { SearchBar } from 'antd-mobile';
 import './SearchTab.css'
 import React from 'react'

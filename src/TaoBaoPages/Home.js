@@ -1,3 +1,5 @@
+//Home.js
+
 import SearchTab from './SearchTab'
 import React, { Component } from 'react'
 import MyTab from './MyTab';

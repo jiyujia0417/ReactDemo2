@@ -1,10 +1,12 @@
+//BottomTab.js
+
 import React from 'react';
 import 'antd-mobile/dist/antd-mobile.css'
 import { TabBar } from "antd-mobile"
 import { withRouter } from "react-router-dom"
 import './bottomTab.css'
 
-class MyTab extends React.Component {
+class BottomTab extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -13,7 +15,6 @@ class MyTab extends React.Component {
 	}
 	render() {
 		console.log('home:', this.props);
-		// const { pathname } = this.props.location;
 		return (
 
 			<div className='bottom'>
@@ -108,4 +109,4 @@ class MyTab extends React.Component {
 		);
 	}
 }
-export default withRouter(MyTab);
+export default withRouter(BottomTab);
