@@ -3,6 +3,8 @@ redux react-redux
 webpack
 umi 框架
 Router (react-router) 怎么实现的（源码）
+
+Redux 提供可预测的状态管理的容器
 */
 import store from './store'
 import React,{useState,useEffect} from 'react';
