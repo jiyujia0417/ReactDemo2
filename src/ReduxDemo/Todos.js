@@ -7,24 +7,25 @@ const Todos = (props) => {
     return (
         <div>
             {
-                props.mydata.map(
-                    item => <li>{item}
+                props.mydata.todo.map((item, idx) =>
+                    <li key={idx}>
+                        {item}
                         <button
                             onClick={() => props.dispatch({
                                 type: 'DEL_TODO',
-                                value: '10000'
+                                value: idx
                             })}
                         >del
                         </button>
                     </li>)
             }
             {/* add button  */}
-            <button
-                onClick={() => props.dispatch({
+            {/* <button
+                onClick={(e) => props.dispatch({
                     type: 'ADD_TODO',
-                    value: '10000'
+                    value: e.target.value
                 })}
-            >add</button>
+            >add</button> */}
 
             {/* del button */}
 
@@ -33,6 +34,7 @@ const Todos = (props) => {
 }
 
 const mapStateToprops = (state) => {
+    console.log(state);
     return { mydata: state }
 }
 

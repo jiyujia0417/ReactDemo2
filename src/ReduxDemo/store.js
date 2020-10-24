@@ -1,6 +1,11 @@
-import {createStore} from 'redux'
+import { createStore, combineReducers } from 'redux'
+import homereducer from './homereducer';
 import todolist from './todosreducer'
 
-const store = createStore(todolist);
+let rootreducer = combineReducers({ 
+    todo:todolist,
+    home:homereducer
+})
+const store = createStore(rootreducer);
 
-export default store
+export default store;
