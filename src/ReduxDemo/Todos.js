@@ -7,18 +7,33 @@ const Todos = (props) => {
     return (
         <div>
             {
-                props.mydata.map(item => <li>{item}</li>)
+                props.mydata.map(
+                    item => <li>{item}
+                        <button
+                            onClick={() => props.dispatch({
+                                type: 'DEL_TODO',
+                                value: '10000'
+                            })}
+                        >del
+                        </button>
+                    </li>)
             }
+            {/* add button  */}
             <button
                 onClick={() => props.dispatch({
-                    type: 'add_todo',
+                    type: 'ADD_TODO',
                     value: '10000'
                 })}
             >add</button>
+
+            {/* del button */}
+
         </div>
     )
 }
 
-export default connect = ((state) => {
-    return {mydata:state}
-})(Todos)
+const mapStateToprops = (state) => {
+    return { mydata: state }
+}
+
+export default connect(mapStateToprops)(Todos)
