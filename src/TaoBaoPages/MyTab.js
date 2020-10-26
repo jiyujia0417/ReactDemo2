@@ -1,5 +1,5 @@
 //MyTab.js
-
+import { Redirect, Route } from 'react-router-dom';
 import React from 'react';
 import 'antd-mobile/dist/antd-mobile.css'
 import { TabBar } from "antd-mobile"
@@ -46,12 +46,19 @@ class MyTab extends React.Component {
 						selectedIcon={
 							<i className="iconfont icon-gouwuche1"></i>
 						}
-						title="购物车"
+						title="收藏"
 						key="cart"
 						selected={pathname === '/cart'}
-						onPress={() => {
-							this.props.history.push('/cart')
-						}}
+						onPress={() => 
+							localStorage.getItem('userinfo')
+							? this.props.history.push('/cart')
+							// :(<Redirect to={{
+							// 	pathname: "/login",
+							// 	state: this.props.location
+							// }} />)
+							
+							:this.props.history.push('/login')
+						}
 						data-seed="logId1"
 					>
 					</TabBar.Item>

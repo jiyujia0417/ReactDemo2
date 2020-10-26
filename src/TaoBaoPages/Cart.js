@@ -6,7 +6,7 @@ import MyTab from './MyTab';
 const Cart = () => {
     return (
         <div>
-            购物车
+            收藏
             <MyTab/>
         </div>
         
