@@ -1,8 +1,14 @@
-import React from 'react'
+import { ActivityIndicator } from 'antd-mobile'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
+import {login} from './actionCreator'
 
 const home = (props) => {
-    const login = () => {
+    // 声明一个自己的状态
+    // const [isShow, setShow] = useState(false)
+
+    const log = () => {
+        // setShow(true)
         let url = 'https://www.fastmock.site/mock/9e4bbf9e35ad15942010865690c87ac6/api/login'
         fetch(url, {
             method: 'post',
@@ -12,10 +18,12 @@ const home = (props) => {
         })
             .then(res => res.json())
             .then(res => {
-                props.dispatch({
-                    type: 'LOGIN',
-                    username: res.data.name
-                })
+                props.dispatch(
+                    login(res.data.name)
+                //     type: 'LOGIN',
+                //     username: res.data.name
+                )
+                // setShow(false)
             })
     }
     return (
@@ -26,10 +34,15 @@ const home = (props) => {
                 props.username
                     ? <div>
                         {props.username}
-                        <button onClick={login}>退出</button>
+                        <button onClick={log}>退出</button>
                     </div>
-                    : <button onClick={login}>登录</button>
+                    : <button onClick={log}>登录</button>
             }
+            <ActivityIndicator
+                toast
+                text="登陆中"
+                // animating={isShow}
+            />
         </div>
     )
 }

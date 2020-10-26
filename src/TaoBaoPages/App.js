@@ -9,6 +9,8 @@ import Me from './Me';
 import JumpSearch from './JumpSearch';
 import Detail from './Detail'
 import More from './More';
+import Login from './Login'
+
 const App = () => {
 	return <Router>
 		<Switch>
@@ -17,9 +19,10 @@ const App = () => {
 			<Route path='/cart' component={Cart} />
 			<Route path='/orderlist' component={Orderlist} />
 			<Route path='/me' component={Me} />
-			<Route path='/more' component={More} />
+			<Route path='/more' component={Login} />
 			<Route path='/JumpChange' component={JumpSearch} />
 			<Route path='/detail' component={Detail} />
+			{/* <Route path='/login' component={Login}/> */}
 			<Route component={Home} />
 		</Switch>
 	</Router>
