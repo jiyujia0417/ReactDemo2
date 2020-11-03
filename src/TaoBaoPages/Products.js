@@ -5,6 +5,7 @@ import { Grid } from 'antd-mobile';
 import { withRouter } from "react-router-dom"
 import { list } from './actionCreator'
 
+
 const products = (props) => {
 
     const product = () => {
@@ -29,8 +30,11 @@ const products = (props) => {
             <Grid data={props.productlist}
                 itemStyle={{ height: '200px', width: '171px', margin: '9px 4.5px 0 4.5px' }}
                 onClick={
-                    () => {
-                        props.history.push('/detail')
+                    (item) => {
+                        props.history.push({
+                            pathname: '/detail',
+                            search: item.img
+                        })
                     }
                 }
                 columnNum={2}
@@ -41,7 +45,7 @@ const products = (props) => {
                             <span>{dataItem.title}</span>
                             <br />
                             <span style={{ color: '#FF852A' }}>￥ {dataItem.price} </span>
-                            <span> {dataItem.index}人已购买</span>
+                            <span> {dataItem.id}人已购买</span>
                         </div>
                     </div>
 
