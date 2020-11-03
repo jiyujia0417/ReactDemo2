@@ -7,9 +7,9 @@ import Carousels from './Carousels';
 import Products from './Products'
 
 export default class Home extends Component {
-    FocusChange = (props) => {
-        console.log(props);
-    }
+    // FocusChange = (props) => {
+    //     console.log(props);
+    // }
     render() {
         return (
             <div>

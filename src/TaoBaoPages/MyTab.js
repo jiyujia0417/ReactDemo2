@@ -13,7 +13,7 @@ class MyTab extends React.Component {
 		};
 	}
 	render() {
-		console.log('home:', this.props);
+		// console.log('home:', this.props);
 		const { pathname } = this.props.location;
 		return (
 			<div style={{ position: 'fixed', width: '100%', bottom: 0 }}>
@@ -49,15 +49,13 @@ class MyTab extends React.Component {
 						title="收藏"
 						key="cart"
 						selected={pathname === '/cart'}
-						onPress={() => 
+						onPress={() =>
 							localStorage.getItem('userinfo')
-							? this.props.history.push('/cart')
-							// :(<Redirect to={{
-							// 	pathname: "/login",
-							// 	state: this.props.location
-							// }} />)
-							
-							:this.props.history.push('/login')
+								? this.props.history.push('/cart')
+								: this.props.history.push({
+									pathname: '/login',
+									search: this.props.history.location.pathname
+								})
 						}
 						data-seed="logId1"
 					>

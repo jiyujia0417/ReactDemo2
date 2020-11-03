@@ -10,11 +10,10 @@ class BottomTab extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedTab: 'blueTab',
+			selectedTab: 'whiteTab',
 		};
 	}
 	render() {
-		console.log('home:', this.props);
 		return (
 
 			<div className='bottom'>
@@ -64,7 +63,17 @@ class BottomTab extends React.Component {
 							}
 							onPress={() => {
 								console.log('收藏')
+								this.setState({
+									selectedTab: 'blackTab',
+								});
+								localStorage.getItem('userinfo')
+									? console.log('user already login')
+									: this.props.history.push({
+										pathname: '/login',
+										search: this.props.history.location.pathname
+									})
 							}}
+							selected={this.state.selectedTab === 'blackTab'}
 							title="收藏"
 							key="shoucang"
 							data-seed='logId'

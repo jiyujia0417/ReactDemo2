@@ -1,14 +1,15 @@
 import React from 'react'
 
 const Login = (props) => {
-    console.log('props:',props);
+    console.log('props:', props);
     const log = () => {
         localStorage.setItem('userinfo', 'tom');
-        props.history.push('/cart');
-        // props.history.goBack()
-        // console.log(props.location)
-        // console.log(props.location.state)
-        // props.history.replace(props.location.state)
+        let urlback = props.location.search.slice(1);
+        console.log('urlback', urlback);
+        if (urlback === '/') {
+            props.history.push('/cart');
+        }
+        else props.history.goBack()
     }
 
     return (
