@@ -11,8 +11,8 @@ class Carousels extends React.Component {
                 <Carousel
                     autoplay={true}
                     infinite={true}
-                    beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                    afterChange={index => console.log('slide to', index)}
+                    // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+                    // afterChange={index => console.log('slide to', index)}
                 >
                     <img
                         src={`https://gw.alicdn.com/imgextra/i1/47/O1CN01W5pthF1CDZFCQ9VAh_!!47-0-lubanu.jpg`}

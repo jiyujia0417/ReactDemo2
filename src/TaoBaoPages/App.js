@@ -1,7 +1,7 @@
 //App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch,Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import Home from './Home';
 import Cart from './Cart';
 import Orderlist from './Orderlist';
@@ -10,25 +10,12 @@ import JumpSearch from './JumpSearch';
 import Detail from './Detail'
 import More from './More';
 import Login from './Login'
-
-// const PrivateRoute = ({ component: Com, ...rest }) => {
-//     return (
-//         <Route {...rest}
-//             render={(props) =>
-//                 localStorage.getItem('userinfo')
-//                     ? <Com {...rest} />
-//                     : (<Redirect to={{
-//                         pathname: "/login",
-//                         state: props.location
-//                     }} />)
-//             }
-//         />
-//     )
-// }
-
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App = () => {
-	return <Router>
+	return <Provider store={store}>
+	<Router>
 		<Switch>
 			<Route exact path='/' component={Home} />
 			<Route path='/home' component={Home} />
@@ -38,9 +25,10 @@ const App = () => {
 			<Route path='/more' component={More} />
 			<Route path='/JumpChange' component={JumpSearch} />
 			<Route path='/detail' component={Detail} />
-			<Route path='/login' component={Login}/>
+			<Route path='/login' component={Login} />
 			<Route component={Home} />
 		</Switch>
 	</Router>
+	</Provider>
 }
 export default App;

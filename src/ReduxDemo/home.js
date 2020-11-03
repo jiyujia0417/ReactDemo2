@@ -1,7 +1,7 @@
 import { ActivityIndicator } from 'antd-mobile'
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import {login} from './actionCreator'
+import { login } from './actionCreator'
 
 const home = (props) => {
     // 声明一个自己的状态
@@ -20,12 +20,14 @@ const home = (props) => {
             .then(res => {
                 props.dispatch(
                     login(res.data.name)
-                //     type: 'LOGIN',
-                //     username: res.data.name
+                    //     type: 'LOGIN',
+                    //     username: res.data.name
                 )
                 // setShow(false)
             })
     }
+    console.log('props:', props)
+    console.log('props.username:', props.username)
     return (
         <div>
 
@@ -38,17 +40,20 @@ const home = (props) => {
                     </div>
                     : <button onClick={log}>登录</button>
             }
-            <ActivityIndicator
+            {/* <ActivityIndicator
                 toast
                 text="登陆中"
                 // animating={isShow}
-            />
+            /> */}
         </div>
     )
 }
 
-const mapStateToProps = (state) => ({
-    username: state.home.username
-})
+const mapStateToProps = (state) => {
+    console.log('state:',state);
+    return {
+        username: state.home.username
+    }
+}
 
 export default connect(mapStateToProps)(home);
