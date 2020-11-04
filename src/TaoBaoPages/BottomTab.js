@@ -5,6 +5,7 @@ import 'antd-mobile/dist/antd-mobile.css'
 import { TabBar } from "antd-mobile"
 import { withRouter } from "react-router-dom"
 import './bottomTab.css'
+import { connect } from 'react-redux'
 
 class BottomTab extends React.Component {
 	constructor(props) {
@@ -71,7 +72,11 @@ class BottomTab extends React.Component {
 									: this.props.history.push({
 										pathname: '/login',
 										search: this.props.history.location.pathname
-									})
+									});
+								this.props.dispatch({
+									type: 'ADD_SHOUCANG',
+									value: this.props.history.location.pathname
+								})
 							}}
 							selected={this.state.selectedTab === 'blackTab'}
 							title="收藏"
@@ -118,4 +123,10 @@ class BottomTab extends React.Component {
 		);
 	}
 }
-export default withRouter(BottomTab);
+
+const mapStateToprops = (state) => {
+	console.log(state);
+	return { mydata: state }
+}
+
+export default withRouter(connect(mapStateToprops)(BottomTab));

@@ -1,11 +1,11 @@
-import React from 'react'
 
-const userinfo = (state={username:''},action) => {
-    return (
-        <div>
-
-        </div>
-    )
+const userinfo = (state = { username: '' }, action) => {
+    switch (action.type) {
+        case 'LOGIN':
+            return { username: action.username }
+        default:
+            return state
+    }
 }
 
 export default userinfo

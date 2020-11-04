@@ -23,3 +23,4 @@ const list = (data) => {
 }
 
 export { login, list }
+
