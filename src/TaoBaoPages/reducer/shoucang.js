@@ -7,7 +7,7 @@ const shoucanglist = (state = shoucang, action) => {
         return [...state, action.value]
     }
 
-    //delete todo
+    //delete shoucang
     if (action.type === 'DEL_SHOUCANG') {
         let arr = [...state];
         arr.splice(action.index, 1)

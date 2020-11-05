@@ -33,7 +33,7 @@ const products = (props) => {
                     (item) => {
                         props.history.push({
                             pathname: '/detail',
-                            search: item.img
+                            search: "img="+item.img+"&title="+item.title+"&id="+item.id
                         })
                     }
                 }

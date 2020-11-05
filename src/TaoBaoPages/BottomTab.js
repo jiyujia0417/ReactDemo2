@@ -15,6 +15,7 @@ class BottomTab extends React.Component {
 		};
 	}
 	render() {
+		console.log('bottom.props:',this.props);
 		return (
 
 			<div className='bottom'>
@@ -75,7 +76,7 @@ class BottomTab extends React.Component {
 									});
 								this.props.dispatch({
 									type: 'ADD_SHOUCANG',
-									value: this.props.history.location.pathname
+									value: (this.props.info.split('&')[2]).split('=')[1]
 								})
 							}}
 							selected={this.state.selectedTab === 'blackTab'}
