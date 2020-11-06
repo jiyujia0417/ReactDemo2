@@ -17,7 +17,6 @@ class BottomTab extends React.Component {
 	render() {
 		let bool = false;
 		let id = this.props.info.split('&')[2].split('=')[1]
-		// console.log('bottom.props:', this.props);
 		for (let i = 0; i < this.props.mydata.shoucang.length; i++) {
 			if (id === this.props.mydata.shoucang[i]) {
 				bool = true;
@@ -74,12 +73,10 @@ class BottomTab extends React.Component {
 							}
 							onPress={() => {
 								console.log('收藏')
-								// console.log(this.props.mydata.shoucang);
-
 								this.setState({
 									selectedTab: 'blackTab',
 								});
-								localStorage.getItem('userinfo')
+								this.props.mydata.userinfo.username
 									? console.log('user already login')
 									: this.props.history.push({
 										pathname: '/login',
@@ -90,7 +87,6 @@ class BottomTab extends React.Component {
 									value: (this.props.info.split('&')[2]).split('=')[1]
 								})
 							}}
-							// selected={this.state.selectedTab === 'blackTab'}
 							selected={bool}
 							title="收藏"
 							key="shoucang"

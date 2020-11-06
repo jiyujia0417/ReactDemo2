@@ -1,9 +1,22 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import {login} from './actionCreator'
 
 const Login = (props) => {
     console.log('props:', props);
+
     const log = () => {
-        localStorage.setItem('userinfo', 'tom');
+        let url="https://www.fastmock.site/mock/9e4bbf9e35ad15942010865690c87ac6/api/login";
+        fetch(url,{
+            method:'post',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        }).then(res=>res.json()).then(res=>{
+            props.dispatch(login(res.data.name))
+        })
+
+        // localStorage.setItem('userinfo', 'tom');
         let urlback = props.location.search.slice(1);
         console.log('urlback', urlback);
         if (urlback === '/') {
@@ -33,4 +46,13 @@ const Login = (props) => {
     )
 }
 
-export default Login
+const mapStateToProps = (state) => {
+    console.log('state:',state);
+    return {
+        username: state.userinfo.username
+    }
+}
+
+export default connect(mapStateToProps)(Login);
+
+// export default Login

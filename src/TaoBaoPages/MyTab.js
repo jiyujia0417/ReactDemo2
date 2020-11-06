@@ -1,4 +1,5 @@
 //MyTab.js
+import { connect } from 'react-redux'
 import { Redirect, Route } from 'react-router-dom';
 import React from 'react';
 import 'antd-mobile/dist/antd-mobile.css'
@@ -13,7 +14,7 @@ class MyTab extends React.Component {
 		};
 	}
 	render() {
-		// console.log('home:', this.props);
+		console.log('mytab:', this.props);
 		const { pathname } = this.props.location;
 		return (
 			<div style={{ position: 'fixed', width: '100%', bottom: 0 }}>
@@ -50,7 +51,7 @@ class MyTab extends React.Component {
 						key="cart"
 						selected={pathname === '/cart'}
 						onPress={() =>
-							localStorage.getItem('userinfo')
+							this.props.mydata.userinfo.username
 								? this.props.history.push('/cart')
 								: this.props.history.push({
 									pathname: '/login',
@@ -115,4 +116,8 @@ class MyTab extends React.Component {
 		);
 	}
 }
-export default withRouter(MyTab);
+const mapStateToprops = (state) => {
+	console.log(state);
+	return { mydata: state }
+}
+export default withRouter(connect(mapStateToprops)(MyTab));
