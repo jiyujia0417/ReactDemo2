@@ -1,4 +1,5 @@
-//Products.js
+// Products.js
+
 import { connect } from 'react-redux'
 import React from 'react'
 import { Grid } from 'antd-mobile';

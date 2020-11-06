@@ -1,3 +1,4 @@
+// reducer/shoucang.js
 
 let shoucang = []
 const shoucanglist = (state = shoucang, action) => {

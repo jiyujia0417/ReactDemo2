@@ -1,3 +1,5 @@
+// store.js
+
 import { createStore, combineReducers } from 'redux'
 import shoucang from './reducer/shoucang';
 import datalist from './reducer/datalist';
@@ -10,7 +12,7 @@ let rootreducer = combineReducers({
 })
 const store = createStore(
     rootreducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 export default store;

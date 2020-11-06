@@ -1,6 +1,5 @@
 //MyTab.js
 import { connect } from 'react-redux'
-import { Redirect, Route } from 'react-router-dom';
 import React from 'react';
 import 'antd-mobile/dist/antd-mobile.css'
 import { TabBar } from "antd-mobile"
@@ -14,7 +13,6 @@ class MyTab extends React.Component {
 		};
 	}
 	render() {
-		console.log('mytab:', this.props);
 		const { pathname } = this.props.location;
 		return (
 			<div style={{ position: 'fixed', width: '100%', bottom: 0 }}>
@@ -117,7 +115,6 @@ class MyTab extends React.Component {
 	}
 }
 const mapStateToprops = (state) => {
-	console.log(state);
 	return { mydata: state }
 }
 export default withRouter(connect(mapStateToprops)(MyTab));

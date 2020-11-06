@@ -134,7 +134,6 @@ class BottomTab extends React.Component {
 }
 
 const mapStateToprops = (state) => {
-	console.log(state);
 	return { mydata: state }
 }
 

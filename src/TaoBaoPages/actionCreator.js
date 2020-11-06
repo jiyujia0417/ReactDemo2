@@ -1,3 +1,5 @@
+// actionCreator.js
+
 const login = (username) => {
     return {
         type: 'LOGIN',
@@ -8,11 +10,11 @@ const login = (username) => {
 const list = (data) => {
     let arr = [];
     for (let i = 0; i < data.length; i++) {
-        let obj = { 
-            id:data[i].id,
-            img:data[i].img,
-            title:data[i].title,
-            price:data[i].price
+        let obj = {
+            id: data[i].id,
+            img: data[i].img,
+            title: data[i].title,
+            price: data[i].price
         }
         arr.push(obj);
     }

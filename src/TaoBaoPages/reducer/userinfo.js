@@ -1,3 +1,4 @@
+// reducer/userinfo.js
 
 const userinfo = (state = { username: '' }, action) => {
     switch (action.type) {

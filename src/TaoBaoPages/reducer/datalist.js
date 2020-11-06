@@ -1,3 +1,5 @@
+// reducer/datalist.js
+
 const datalist = (state = [], action) => {
 
     switch (action.type) {

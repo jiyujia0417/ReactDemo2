@@ -7,7 +7,7 @@ import BottomTab from './BottomTab';
 import './detail.css'
 
 const Detail = (props) => {
-   console.log('detail.props',props.location.search)
+
     return <div>
         <div style={{ position: "fixed", top: '0', width: '100%' }}>
             <NavBar
@@ -22,8 +22,8 @@ const Detail = (props) => {
             alt=""
             style={{ width: '100%', verticalAlign: 'top' }}
         />
-       
-        <BottomTab info={props.location.search}/>
+
+        <BottomTab info={props.location.search} />
 
     </div>
 }

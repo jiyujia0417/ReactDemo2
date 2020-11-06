@@ -6,14 +6,11 @@ import MyTab from './MyTab'
 import { connect } from 'react-redux'
 
 const Cart = (props) => {
-    console.log('cart.props', props);
-    console.log('cart.shoucang:', props.mydata.shoucang);
-    console.log('cart.datalist', props.mydata.datalist);
     let arr = [];
     for (let i = 0; i < props.mydata.shoucang.length; i++) {
         arr.push(props.mydata.datalist.filter((item, index) => { return props.mydata.shoucang[i] == item.id })[0])
     }
-    console.log('arr:', arr);
+
     return (
 
         <div>
@@ -42,6 +39,8 @@ const Cart = (props) => {
 
                 )}
             />
+            <div className="sub-title" style={{ color: '#FF4E22', textAlign: 'center', height: '50px', lineHeight: '50px' }}>清空购物车~</div>
+            <div style={{ height: '50px' }}></div>
             <MyTab />
         </div>
 
@@ -49,7 +48,6 @@ const Cart = (props) => {
 }
 
 const mapStateToprops = (state) => {
-    console.log(state);
     return { mydata: state }
 }
 

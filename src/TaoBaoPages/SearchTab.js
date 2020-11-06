@@ -9,8 +9,6 @@ import { withRouter } from "react-router-dom"
 class SearchTab extends React.Component {
 
     render() {
-        // console.log('search:', this.props);
-        // console.log('location', this.props.location);
 
         return (
             <div className='searchTab'>
