@@ -15,7 +15,16 @@ class BottomTab extends React.Component {
 		};
 	}
 	render() {
-		console.log('bottom.props:',this.props);
+		let bool = false;
+		let id = this.props.info.split('&')[2].split('=')[1]
+		// console.log('bottom.props:', this.props);
+		for (let i = 0; i < this.props.mydata.shoucang.length; i++) {
+			if (id === this.props.mydata.shoucang[i]) {
+				bool = true;
+				break;
+			}
+		}
+
 		return (
 
 			<div className='bottom'>
@@ -65,6 +74,8 @@ class BottomTab extends React.Component {
 							}
 							onPress={() => {
 								console.log('收藏')
+								// console.log(this.props.mydata.shoucang);
+
 								this.setState({
 									selectedTab: 'blackTab',
 								});
@@ -79,7 +90,8 @@ class BottomTab extends React.Component {
 									value: (this.props.info.split('&')[2]).split('=')[1]
 								})
 							}}
-							selected={this.state.selectedTab === 'blackTab'}
+							// selected={this.state.selectedTab === 'blackTab'}
+							selected={bool}
 							title="收藏"
 							key="shoucang"
 							data-seed='logId'
