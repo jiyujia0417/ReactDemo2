@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { login } from './actionCreator'
 
 const Login = (props) => {
-
+    console.log('login.props:',props);
     const log = () => {
         let url = "https://www.fastmock.site/mock/9e4bbf9e35ad15942010865690c87ac6/api/login";
         fetch(url, {
@@ -47,6 +47,7 @@ const Login = (props) => {
 }
 
 const mapStateToProps = (state) => {
+    console.log('login.state:',state);
     return {
         username: state.userinfo.username
     }

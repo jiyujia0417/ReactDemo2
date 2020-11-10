@@ -8,7 +8,7 @@ import { list } from './actionCreator'
 
 
 const products = (props) => {
-
+    console.log('prodects.props:', props);
     const product = () => {
         let url = 'https://www.fastmock.site/mock/9e4bbf9e35ad15942010865690c87ac6/api/getgoodslist';
         fetch(url, {
@@ -34,7 +34,7 @@ const products = (props) => {
                     (item) => {
                         props.history.push({
                             pathname: '/detail',
-                            search: "img="+item.img+"&title="+item.title+"&id="+item.id
+                            search: "img=" + item.img + "&title=" + item.title + "&id=" + item.id
                         })
                     }
                 }
@@ -57,5 +57,10 @@ const products = (props) => {
         </div>
     )
 }
-const mapStateToProps = (state) => ({ productlist: state.datalist })
+const mapStateToProps = (state) => {
+    console.log('products.state:',state)
+    return {
+        productlist: state.datalist
+    }
+}
 export default withRouter(connect(mapStateToProps)(products))
